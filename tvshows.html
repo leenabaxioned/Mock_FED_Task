@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Homepage</title>
+    <!-- View-port Basics: http://mzl.la/VYREaP -->
+    <!-- This meta tag is used for mobile device to display the page without any zooming,
+       so how much the device is able to fit on the screen is what's shown initially. 
+       Remove comments from this tag, when you want to apply media queries to the website. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--font-awesome link for icons-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/font-awesome/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--container start-->
+    <div class="container">
+      <!--header section start-->
+      <header class="homepage-header">
+        <div class="wrapper">
+          <div class="header-left">
+            <h1 class="logo-container">
+              <a href="homepage.html" class="logo-figure" title="Movie Logo">
+                <figure>
+                  <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
+                </figure>
+              </a>
+              <a href="homepage.html" class="logo-text" title="Movie Logo"
+                >Movie Plaza</a
+              >
+            </h1>
+            <nav>
+              <ul>
+                <li>
+                  <a href="homepage.html">Movies</a>
+                </li>
+                <li>
+                  <a href="tvshows.html">TV</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-right">
+            <form class="search-box">
+              <input
+                type="text"
+                id="search"
+                class="searchinput"
+                placeholder="Search"
+              />
+            </form>
+            <button id="logout" class="submit">Logout</button>
+          </div>
+        </div>
+      </header>
+      <!--header section ends-->
+      <!--main section start-->
+      <main>
+        <section class="banner-img2">
+          <figure>
+            <img src="assets/images/bannerimg.png" alt="Movie Logo" />
+          </figure>        
+        </section>
+        <section class="toprated-tvshows">
+          <div class="wrapper">
+            <!-- Placeholder for movie and TV show sections -->
+            <h2 class="shows-heading">Top Rated TV Shows</h2>
+            <div class="list">
+              <ul id="main" class="slide-list"></ul>
+              <ul class="next-previous">
+                <li><span class="previous">previous</span></li>
+                <li><span class="next">next</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="popular-tvshows">
+          <div class="wrapper">
+            <!-- Placeholder for movie and TV show sections -->
+            <h2 class="shows-heading">Popular Movies TV shows</h2>
+            <div class="list">
+              <ul id="popular-tvshows" class="slide-list"></ul>
+              <ul class="next-previous">
+                <li><span class="previous">previous</span></li>
+                <li><span class="next">next</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="nowplaying-tvshows">
+          <div class="wrapper">
+            <!-- Placeholder for movie and TV show sections -->
+            <h2 class="shows-heading">Now Playing TV shows</h2>
+            <div class="list">
+              <ul id="nowplaying-tvshows" class="slide-list"></ul>
+              <ul class="next-previous">
+                <li><span class="previous">previous</span></li>
+                <li><span class="next">next</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="upcoming-tvshows">
+          <div class="wrapper">
+            <!-- Placeholder for movie and TV show sections -->
+            <h2 class="shows-heading">Upcoming TV shows</h2>
+            <div class="list">
+              <ul id="upcoming-tvshows" class="slide-list"></ul>
+              <ul class="next-previous">
+                <li><span class="previous">previous</span></li>
+                <li><span class="next">next</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--main section ends-->
+      <!--footer section start-->
+      <footer>
+        <div class="wrapper">
+          <p>&copy; 2024 The Movie DB Platform</p>
+        </div>
+      </footer>
+      <!--footer section ends-->
+    </div>
+    <!--container end-->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
