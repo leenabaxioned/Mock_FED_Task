@@ -83,7 +83,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Gill Sans", sans-serif;
   overflow-x: hidden;
 }
 
@@ -97,16 +97,65 @@ li {
   list-style-type: none;
 }
 
+.btn {
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #33d4d6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+border: 1px solid #33d4d6;
+background-color: #fff;
+color: #33d4d6;
+} 
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 100%; 
   margin: 0 auto;
 }
+
 /*=================================
   Header styling starts here
 =================================*/
+/* Homepage header styling */
+header { background-color: #321600; }
 
+.homepage-header .wrapper,
+.homepage-header nav ul,
+.header-left,
+.header-right  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage-header .wrapper { width: 90%; }
+
+.homepage-header .logo-container { flex-basis: 45%; }
+.homepage-header .logo-figure { flex-basis: 25%; }
+.homepage-header .logo-text { flex-basis: 66%; }
+.homepage-header nav { flex-basis: 20%; }
+.homepage-header .submit { flex-basis: 10%; }
+.header-left { flex-basis: 40%; }
+.header-right { flex-basis: 45%; }
+.header-right .search-box { flex-basis: 80%; }
+
+.homepage-header nav ul a { 
+  color: #c4ab91;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.homepage-header nav ul a:hover { border-bottom: 1px solid #c4ab91; }
+.homepage-header .searchinput { border-radius: 50px; }
 /*=================================
   Header styling ends here
 =================================*/  
@@ -114,7 +163,336 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* banner styling starts here */
+.banner-img2 img{
+  display: block;
+  width: 100%;
+  height: 80vh;
+}
 
+.main .wrapper { display: flex; }
+
+.logo-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .banner-img1 { flex-basis: 70%; }
+.logo-figure { flex-basis: 20%; }
+
+.banner-img1 img {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+.logo-text { 
+  font-size: 25px;
+  background: linear-gradient(to bottom, #c37928, #d1995e,#d14812, #ec1313);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 4px 3px 4px #c37928;
+}
+
+.login-container {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.welcome-text { 
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+.welcome-text h2 { 
+  padding-bottom: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #c0894e;
+}
+
+.welcome-text p {
+  font-size: 15px;
+  color: #c0894e;
+}
+
+.form-group { margin-bottom: 20px; }
+
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  background-color: #c37928;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+#logout.submit { padding: 5px 20px; }
+
+.submit:active {
+  background-color: #c37928;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+.submit:hover { 
+  padding: 12px 20px;
+  border: 1px solid #c37928;
+  background-color: transparent;
+  color: #c37928;
+ }
+
+#login-form{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+
+ #search { padding: 8px 20px; }
+
+ /* .form-group {
+  font-family: "FontAwesome";
+  position: relative;
+}
+
+.form-group::before { 
+  position: absolute;
+  top: 45%;
+  left: 0;
+  content: "\f004";
+  font-size: 15px;
+  color: #878690;
+  text-indent: 0;
+}
+
+.form-group:focus::before { color: transparent; } */
+
+/* homepage main styling starts here */
+.toprated,
+.popular,
+.nowplaying,
+.upcoming,
+.toprated-tvshows,
+.popular-tvshows,
+.nowplaying-tvshows,
+.upcoming-tvshows { padding: 10px; }
+
+.shows-heading {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.list { 
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden; 
+}
+
+#main,
+#popular-movies,
+#nowplaying-movies,
+#upcoming-movies,
+#popular-tvshows,
+#nowplaying-tvshows,
+#upcoming-tvshows {
+  width: 300%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.movie {
+  width: 30%; 
+  position: relative;
+  margin: 16px;
+  border-radius: 3px;
+  background-color: #412109;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(0px);
+}
+
+.movie img { 
+  display: block;
+  width: 100%;
+  object-fit: cover;
+ }
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
+  padding: 5px 10px;
+  color: #eee;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 { 
+  order: 2;
+  margin-top: 0; 
+  font-size: 12px;
+}
+
+.movie-info span {
+  font-family: "FontAwesome";
+  display: flex;
+  gap: 5px;
+  padding-top: 5px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.movie-info span::before { 
+  content: "\f005";
+  font-size: 15px;
+  color: #d6ae1d;
+  text-indent: 0;
+}
+
+.movie-info span.green { color: #82d882; }
+.movie-info span.orange { color: #ffa500; }
+.movie-info span.red { color: #ff0000; }
+
+.movie .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  max-height: 100%;
+  background-color: #d8c9b8;
+  color: #321600;
+  transform: translateY(140%);
+  transition: all 0.7s;
+  overflow-y: auto;
+}
+
+.movie:hover .overview { transform: translateY(0); }
+.overview h3 { font-weight: 600; }
+.overview-info {
+  padding-top: 10px;
+  font-size: 12px;
+}
+/* homepage main styling ends here */
+
+/* modal styling starts here */
+#moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cancel {
+  font-family: "FontAwesome";
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+  text-indent: -9999px;
+ }
+
+ .cancel::before { 
+  content: "\f00d";
+  font-size: 15px;
+  color: #000;
+  text-indent: 0;
+}
+
+/* .close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+/* Slider Styling */
+.next-previous span {
+  display: flex;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+.next-previous span::before {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #523723;
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  font-weight: 900;
+  text-indent: 0px;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.next-previous span:hover:before { background-color: #321600; }
+
+.previous::before {
+  content: "\3c";
+  left: 2%;
+}
+.next::before {
+  content: "\3e";
+  right: 0;
+}
 /*=================================
   main styling ends here
 =================================*/
@@ -122,7 +500,16 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer .wrapper{
+  padding: 20px;
+  background-color: #321600;
+  color: #c4ab91;
+}
 
+footer p {
+  font-size: 15px;
+  text-align: center;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
