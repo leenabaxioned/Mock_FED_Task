@@ -116,7 +116,6 @@ color: #33d4d6;
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
   width: 100%; 
   margin: 0 auto;
 }
@@ -128,16 +127,16 @@ color: #33d4d6;
 header { background-color: #321600; }
 
 .homepage-header .wrapper,
-.homepage-header nav ul,
 .header-left,
-.header-right  {
+.header-right,
+.homepage-header nav ul   {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.hamburger { display: none; }
 .homepage-header .wrapper { width: 90%; }
-
 .homepage-header .logo-container { flex-basis: 45%; }
 .homepage-header .logo-figure { flex-basis: 25%; }
 .homepage-header .logo-text { flex-basis: 66%; }
@@ -292,10 +291,12 @@ input[type="password"] {
 .popular,
 .nowplaying,
 .upcoming,
-.toprated-tvshows,
-.popular-tvshows,
-.nowplaying-tvshows,
-.upcoming-tvshows { padding: 10px; }
+.toprated-tvshow,
+.popular-tvshow,
+.nowplaying-tvshow,
+.upcoming-tvshow,
+.trending,
+.trending-tvshow { padding: 10px; }
 
 .shows-heading {
   font-size: 30px;
@@ -313,9 +314,12 @@ input[type="password"] {
 #popular-movies,
 #nowplaying-movies,
 #upcoming-movies,
+#trending-movies,
+#toprated-tvshows,
 #popular-tvshows,
 #nowplaying-tvshows,
-#upcoming-tvshows {
+#upcoming-tvshows,
+#trending-tvshows {
   width: 300%;
   display: inline-flex;
   justify-content: space-between;
@@ -340,7 +344,7 @@ input[type="password"] {
 .movie-info {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   gap: 5px;
   padding: 5px 10px;
   color: #eee;
@@ -385,7 +389,7 @@ input[type="password"] {
   max-height: 100%;
   background-color: #d8c9b8;
   color: #321600;
-  transform: translateY(140%);
+  transform: translateY(200%);
   transition: all 0.7s;
   overflow-y: auto;
 }
@@ -500,14 +504,21 @@ input[type="password"] {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer { 
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  height: auto;
+}
+
 footer .wrapper{
-  padding: 20px;
+  padding: 15px;
   background-color: #321600;
   color: #c4ab91;
 }
 
 footer p {
-  font-size: 15px;
+  font-size: 12px;
   text-align: center;
 }
  /*=================================
@@ -517,4 +528,73 @@ footer p {
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .head-nav { order: 3; }
+  .hamburger {
+    position: absolute;
+    z-index: 100;
+    top: 3%;
+    right: 1%;
+    padding: 2px;
+    background: #c37928;
+    border-color: transparent;
+    cursor: pointer;
+    display: block;
+  }
+     
+  .material-icons { color: #fff; }
+  .closeIcon { display: none; }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding-top: 16px;
+    background: #c37928;;
+    color: #fff;
+    list-style: none;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+  }
+
+  .showMenu { transform: translateY(0); }
+  
+  .homepage-header nav ul { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .homepage-header nav ul a { color: #fff; }
+  .homepage-header .logo-container { flex-basis: 60%; }
+  .header-right { flex-basis: 40%; }
 }  
+
+@media only screen and (max-width: 640px) {
+.main .wrapper { flex-wrap: wrap; }
+.banner-img1 { flex-basis: 100%; }
+.login-container { flex-basis: 100%; }
+.logo-figure { flex-basis: 10%; }
+.welcome-text p { font-size: 12px; }
+.welcome-text h2 {
+  padding-bottom: 5px;
+  font-size: 30px;
+  }
+
+#login-form { width: 45%; }
+
+
+input[type="text"], input[type="password"] {
+  width: 84%;
+  padding: 7px 20px;
+  }
+
+.submit {
+  padding: 7px 20px;
+  font-size: 12px;
+  }
+}
