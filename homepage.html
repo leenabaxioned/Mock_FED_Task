@@ -24,11 +24,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+     <!-- Material Icon CDN -->
+     <link
+     href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet"
+   />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
   </head>
 
-  <body>
+  <body class="moviespage">
     <!--container start-->
     <div class="container">
       <!--header section start-->
@@ -37,23 +42,26 @@
           <div class="header-left">
             <h1 class="logo-container">
               <a href="homepage.html" class="logo-figure" title="Movie Logo">
-                <figure>
                   <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
-                </figure>
               </a>
               <a href="homepage.html" class="logo-text" title="Movie Logo"
                 >Movie Plaza</a
               >
             </h1>
-            <nav>
-              <ul>
+            <nav class="head-nav">
+              <ul class="nav-menu">
                 <li>
-                  <a href="homepage.html">Movies</a>
+                  <a href="homepage.html" class="nav-link" title="Homepage">Movies</a>
                 </li>
                 <li>
-                  <a href="tvshows.html">TV</a>
+                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page">TV</a>
                 </li>
               </ul>
+              <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+              </button>
             </nav>
           </div>
           <div class="header-right">
@@ -75,14 +83,14 @@
         <section class="banner-img2">
           <figure>
             <img src="assets/images/bannerimg.png" alt="Movie Logo" />
-          </figure>        
+          </figure>
         </section>
         <section class="toprated">
           <div class="wrapper">
             <!-- Placeholder for movie and TV show sections -->
             <h2 class="shows-heading">Top Rated Movies</h2>
             <div class="list">
-              <ul id="main" class="slide-list"></ul>
+              <ul id="main" class="slide-list slider"></ul>
               <ul class="next-previous">
                 <li><span class="previous">previous</span></li>
                 <li><span class="next">next</span></li>
@@ -129,6 +137,19 @@
             </div>
           </div>
         </section>
+        <section class="trending">
+          <div class="wrapper">
+            <!-- Placeholder for movie and TV show sections -->
+            <h2 class="shows-heading">Trending Movies</h2>
+            <div class="list">
+              <ul id="trending-movies" class="slide-list"></ul>
+              <ul class="next-previous">
+                <li><span class="previous">previous</span></li>
+                <li><span class="next">next</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
       <!--main section ends-->
       <!--footer section start-->
@@ -140,6 +161,6 @@
       <!--footer section ends-->
     </div>
     <!--container end-->
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
   </body>
 </html>
