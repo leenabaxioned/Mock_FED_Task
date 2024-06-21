@@ -24,6 +24,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+     <!-- Material Icon CDN -->
+     <link
+     href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet"
+   />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
   </head>
@@ -37,27 +42,26 @@
           <div class="header-left">
             <h1 class="logo-container">
               <a href="#FIXME" class="logo-figure" title="Movie Logo">
-                <figure>
                   <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
-                </figure>
               </a>
               <a href="#FIXME" class="logo-text" title="Movie Logo"
                 >Movie Plaza</a
               >
             </h1>
-            <nav>
-              <ul>
+            <nav class="head-nav">
+              <ul class="nav-menu">
                 <li>
-                  <a href="homepage.html"
-                    >Movies</a
-                  >
+                  <a href="homepage.html" class="nav-link" title="Homepage">Movies</a>
                 </li>
                 <li>
-                  <a href="details.html"
-                    >TV</a
-                  >
+                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page">TV</a>
                 </li>
               </ul>
+              <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+              </button>
             </nav>
           </div>
           <div class="header-right">
@@ -78,22 +82,10 @@
       <main>
         <section class="details-main">
           <div class="wrapper">
-            <div id="moviesContainer" class="slider-container">
+            <ul id="moviesContainer" class="slider-container">
               <!-- Movies will be dynamically added here -->
+            </ul>
             </div>
-
-            <div class="controls">
-              <button id="prevBtn">Previous</button>
-              <button id="nextBtn">Next</button>
-            </div>
-          
-            <div class="modal" id="modal">
-              <div class="modal-content" id="modalContent">
-                <!-- Movie details will be dynamically added here -->
-                <!-- <span class="close" onclick="closeModal()">&times;</span> -->
-              </div>
-            </div>
-          </div>
         </section>
       </main>
       <!--main section ends-->
