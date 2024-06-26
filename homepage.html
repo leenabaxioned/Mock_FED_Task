@@ -15,11 +15,11 @@
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!--font-awesome link for icons-->
-    <link
+    <!-- <link
       rel="stylesheet"
       media="screen"
       href="assets/vendor/font-awesome/css/all.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -29,6 +29,9 @@
      href="https://fonts.googleapis.com/icon?family=Material+Icons"
      rel="stylesheet"
    />
+   <!-- Slick css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" type="text/css" referrerpolicy="stylesheet">
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
   </head>
@@ -91,10 +94,6 @@
             <h2 class="shows-heading">Top Rated Movies</h2>
             <div class="list">
               <ul id="main" class="slide-list slider"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -103,11 +102,7 @@
             <!-- Placeholder for movie and TV show sections -->
             <h2 class="shows-heading">Popular Movies</h2>
             <div class="list">
-              <ul id="popular-movies" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
+              <ul id="popular-movies" class="slide-list slider"></ul>
             </div>
           </div>
         </section>
@@ -116,11 +111,7 @@
             <!-- Placeholder for movie and TV show sections -->
             <h2 class="shows-heading">Now Playing Movies</h2>
             <div class="list">
-              <ul id="nowplaying-movies" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
+              <ul id="nowplaying-movies" class="slide-list slider"></ul>
             </div>
           </div>
         </section>
@@ -129,11 +120,7 @@
             <!-- Placeholder for movie and TV show sections -->
             <h2 class="shows-heading">Upcoming Movies</h2>
             <div class="list">
-              <ul id="upcoming-movies" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
+              <ul id="upcoming-movies" class="slide-list slider"></ul>
             </div>
           </div>
         </section>
@@ -142,11 +129,7 @@
             <!-- Placeholder for movie and TV show sections -->
             <h2 class="shows-heading">Trending Movies</h2>
             <div class="list">
-              <ul id="trending-movies" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
+              <ul id="trending-movies" class="slide-list slider"></ul>
             </div>
           </div>
         </section>
@@ -161,6 +144,12 @@
       <!--footer section ends-->
     </div>
     <!--container end-->
-  <script src="assets/js/script.js"></script>
+    <!-- jQuery -->
+  <!-- <script src="assets/vendor/jquery-3.7.1.min.js"></script> -->
+    <!-- Script tag starts here -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Script tag ends here -->
   </body>
 </html>
