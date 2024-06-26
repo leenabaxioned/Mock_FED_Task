@@ -166,7 +166,8 @@ header { background-color: #321600; }
 .banner-img2 img{
   display: block;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .main .wrapper { display: flex; }
@@ -268,24 +269,7 @@ input[type="password"] {
  }
 
  #search { padding: 8px 20px; }
-
- /* .form-group {
-  font-family: "FontAwesome";
-  position: relative;
-}
-
-.form-group::before { 
-  position: absolute;
-  top: 45%;
-  left: 0;
-  content: "\f004";
-  font-size: 15px;
-  color: #878690;
-  text-indent: 0;
-}
-
-.form-group:focus::before { color: transparent; } */
-
+ 
 /* homepage main styling starts here */
 .toprated,
 .popular,
@@ -310,7 +294,7 @@ input[type="password"] {
   overflow: hidden; 
 }
 
-#main,
+/* #main,
 #popular-movies,
 #nowplaying-movies,
 #upcoming-movies,
@@ -323,12 +307,87 @@ input[type="password"] {
   width: 300%;
   display: inline-flex;
   justify-content: space-between;
+} */
+
+/* new slick slider sliding starts here */
+.slick-slider { padding: 0 20px; }
+.slick-initialized .slick-slide { margin-right: 10px; }
+
+.slide-list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #4b2b13;
+  cursor: pointer;
+  text-indent: -9999px;
+  transform: translateY(-50%);
 }
 
+.slide-list .slick-prev { left:  0; }
+.slide-list .slick-next { right:  0; }
+
+/* .slide-list .slick-arrow.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: auto;
+  right: 0;
+} */
+
+.slide-list .slick-arrow::before {
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 20px;
+  text-indent: 0;
+}
+
+.slide-list .slick-prev::before { content: "\3c"; }
+.slide-list .slick-next::before { content: "\3e"; }
+.slide-list .slick-arrow:hover { background-color: #321600; }
+/* new slick slider sliding starts here */
+
+/* slick slider styling */
+/* .slick-initialized .slick-slide { margin-right: 10px; }
+
+.slick-arrow {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  border: none;
+  background-color: #492e1a;
+  text-indent: -9999px;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.slick-arrow:hover { background-color: #321600; }
+
+.slick-arrow::before {
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-indent: 0px;
+}
+
+.slick-prev::before { content: "\3c"; }
+.slick-next::before { content: "\3e"; }
+.slick-prev { left: 1%; }
+.slick-next { right: 1%; } */
+
 .movie {
-  width: 30%; 
   position: relative;
-  margin: 16px;
   border-radius: 3px;
   background-color: #412109;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -338,6 +397,7 @@ input[type="password"] {
 .movie img { 
   display: block;
   width: 100%;
+  height: auto;
   object-fit: cover;
  }
 
@@ -402,100 +462,29 @@ input[type="password"] {
 }
 /* homepage main styling ends here */
 
-/* modal styling starts here */
+/* Details page styling */
 #moviesContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.cancel {
-  font-family: "FontAwesome";
-  display: flex;
-  justify-content: right;
-  cursor: pointer;
-  text-indent: -9999px;
- }
-
- .cancel::before { 
-  content: "\f00d";
-  font-size: 15px;
-  color: #000;
-  text-indent: 0;
-}
-
-/* .close {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-/* Slider Styling */
-.next-previous span {
-  display: flex;
-  cursor: pointer;
-  text-indent: -9999px;
-}
-.next-previous span::before {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #523723;
-  color: #fff;
-  font-family: "FontAwesome";
-  font-size: 16px;
-  font-weight: 900;
-  text-indent: 0px;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s;
 }
 
-.next-previous span:hover:before { background-color: #321600; }
+#moviesContainer .movie-info { align-items: center; }  
+#moviesContainer .movie-info h3 { font-size: 25px; }
 
-.previous::before {
-  content: "\3c";
-  left: 2%;
+.detail-content {
+  padding: 20px;
+  text-align: center;
 }
-.next::before {
-  content: "\3e";
-  right: 0;
+
+.detail-content .movie-info { align-items: center; }
+
+.detail-info { 
+  width: 80%;
+  margin: 20px auto;
+  background: #321600;
+  color: #c4ab91
 }
 /*=================================
   main styling ends here
@@ -505,8 +494,8 @@ input[type="password"] {
   footer styling starts here
 =================================*/ 
 footer { 
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   width: 100%; 
   height: auto;
 }
@@ -528,19 +517,22 @@ footer p {
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .homepage-header .wrapper { position: relative; }
+  #search { padding: 5px 15px; }
+  #logout.submit { padding: 5px 10px; }
   .head-nav { order: 3; }
   .hamburger {
     position: absolute;
     z-index: 100;
-    top: 3%;
-    right: 1%;
+    top: 20%;
+    right: -4%;
     padding: 2px;
     background: #c37928;
     border-color: transparent;
     cursor: pointer;
     display: block;
   }
-     
+  .homepage-header nav ul a:hover { border-bottom: none }
   .material-icons { color: #fff; }
   .closeIcon { display: none; }
 
@@ -571,7 +563,11 @@ footer p {
 
   .homepage-header nav ul a { color: #fff; }
   .homepage-header .logo-container { flex-basis: 60%; }
-  .header-right { flex-basis: 40%; }
+  .header-right {
+    flex-basis: 100%;
+    margin-right: 10px;
+}
+  .header-left { flex-basis: 70%; }
 }  
 
 @media only screen and (max-width: 640px) {
@@ -582,19 +578,69 @@ footer p {
 .welcome-text p { font-size: 12px; }
 .welcome-text h2 {
   padding-bottom: 5px;
-  font-size: 30px;
+  font-size: 25px;
   }
 
-#login-form { width: 45%; }
-
+#login-form { width: 80%; }
 
 input[type="text"], input[type="password"] {
-  width: 84%;
+  width: 85%;
   padding: 7px 20px;
   }
 
 .submit {
+  width: 95%;
+  margin-right: 20px;
   padding: 7px 20px;
   font-size: 12px;
   }
+
+  .login-container {
+    position: absolute;
+    opacity: 0.8;
+    inset: 0;
+    flex-basis: 100%;
+}
+
+.homepage-header .logo-container { flex-basis: 100%; }
+.homepage-header .logo-text { flex-basis: 80%; }
+.header-right { flex-basis: 60%; }
+.submit:hover {
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  background-color: #c37928;
+  color: #fff;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  .submit { width: 97%; }
+  .homepage-header .logo-text { 
+    flex-basis: 80%; 
+    font-size: 20px;
+  }
+
+  .header-right { flex-basis: 75%; }
+  #search { padding: 3px 10px; }
+  .material-icons { font-size: 15px; }
+  .next::before { right: -7%; }
+  #logout.submit {
+    padding: 3px 10px;
+    font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 320px) {
+  input[type="text"], input[type="password"] { width: 80%; }
+  .submit { width: 100%; }
+  .homepage-header .logo-figure { flex-basis: 56%; }
+  .homepage-header .logo-text { font-size: 15px; }
+  .header-right { flex-basis: 100%; }
+  #search { padding: 2px 10px; }
+  .header-right .search-box { flex-basis: 50%; }
+  #logout.submit {
+    padding: 3px 10px;
+    font-size: 10px;
+  }
+  .previous::before { left: 7%; }
 }
