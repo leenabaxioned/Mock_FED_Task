@@ -15,20 +15,31 @@
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!--font-awesome link for icons-->
-    <link
+    <!-- <link
       rel="stylesheet"
       media="screen"
       href="assets/vendor/font-awesome/css/all.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-     <!-- Material Icon CDN -->
-     <link
-     href="https://fonts.googleapis.com/icon?family=Material+Icons"
-     rel="stylesheet"
-   />
+    <!-- Material Icon CDN -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Slick css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      type="text/css"
+      referrerpolicy="stylesheet"
+    />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
   </head>
@@ -41,20 +52,24 @@
         <div class="wrapper">
           <div class="header-left">
             <h1 class="logo-container">
-              <a href="#FIXME" class="logo-figure" title="Movie Logo">
-                  <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
+              <a href="homepage.html" class="logo-figure" title="Movie Logo">
+                <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
               </a>
-              <a href="#FIXME" class="logo-text" title="Movie Logo"
+              <a href="homepage.html" class="logo-text" title="Movie Logo"
                 >Movie Plaza</a
               >
             </h1>
             <nav class="head-nav">
               <ul class="nav-menu">
                 <li>
-                  <a href="homepage.html" class="nav-link" title="Homepage">Movies</a>
+                  <a href="homepage.html" class="nav-link" title="Homepage"
+                    >Movies</a
+                  >
                 </li>
                 <li>
-                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page">TV</a>
+                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page"
+                    >TV</a
+                  >
                 </li>
               </ul>
               <button class="hamburger">
@@ -82,10 +97,13 @@
       <main>
         <section class="details-main">
           <div class="wrapper">
-            <ul id="moviesContainer" class="slider-container">
+            <div id="moviesContainer">
               <!-- Movies will be dynamically added here -->
-            </ul>
             </div>
+            <div id="tvContainer">
+              <!-- Movies will be dynamically added here -->
+            </div>
+          </div>
         </section>
       </main>
       <!--main section ends-->
@@ -98,6 +116,19 @@
       <!--footer section ends-->
     </div>
     <!--container end-->
+    <!-- Script tag starts here -->
+    <!-- jQuery -->
+    <!-- <script src="assets/vendor/jquery-3.7.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
     <script src="assets/js/script.js"></script>
+    <!-- Script tag ends here -->
   </body>
 </html>

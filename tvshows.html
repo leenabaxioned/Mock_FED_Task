@@ -15,20 +15,31 @@
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!--font-awesome link for icons-->
-    <link
+    <!-- <link
       rel="stylesheet"
       media="screen"
       href="assets/vendor/font-awesome/css/all.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-     <!-- Material Icon CDN -->
-     <link
-     href="https://fonts.googleapis.com/icon?family=Material+Icons"
-     rel="stylesheet"
-   />
+    <!-- Material Icon CDN -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Slick css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      type="text/css"
+      referrerpolicy="stylesheet"
+    />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
   </head>
@@ -42,7 +53,7 @@
           <div class="header-left">
             <h1 class="logo-container">
               <a href="homepage.html" class="logo-figure" title="Movie Logo">
-                  <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
+                <img src="assets/images/movieLogo.jpg" alt="Movie Logo" />
               </a>
               <a href="homepage.html" class="logo-text" title="Movie Logo"
                 >Movie Plaza</a
@@ -51,10 +62,14 @@
             <nav class="head-nav">
               <ul class="nav-menu">
                 <li>
-                  <a href="homepage.html" class="nav-link" title="Homepage">Movies</a>
+                  <a href="homepage.html" class="nav-link" title="Homepage"
+                    >Movies</a
+                  >
                 </li>
                 <li>
-                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page">TV</a>
+                  <a href="tvshows.html" class="nav-link" title="Tv Shows Page"
+                    >TV</a
+                  >
                 </li>
               </ul>
               <button class="hamburger">
@@ -83,7 +98,7 @@
         <section class="banner-img2">
           <figure>
             <img src="assets/images/bannerimg.png" alt="Movie Logo" />
-          </figure>        
+          </figure>
         </section>
         <section class="toprated-tvshow">
           <div class="wrapper">
@@ -91,10 +106,6 @@
             <h2 class="shows-heading">Top Rated TV Shows</h2>
             <div class="list">
               <ul id="toprated-tvshows" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -104,10 +115,6 @@
             <h2 class="shows-heading">Popular TV shows</h2>
             <div class="list">
               <ul id="popular-tvshows" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -117,10 +124,6 @@
             <h2 class="shows-heading">Now Playing TV shows</h2>
             <div class="list">
               <ul id="nowplaying-tvshows" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -130,10 +133,6 @@
             <h2 class="shows-heading">Upcoming TV shows</h2>
             <div class="list">
               <ul id="upcoming-tvshows" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -143,10 +142,6 @@
             <h2 class="shows-heading">Trending TV shows</h2>
             <div class="list">
               <ul id="trending-tvshows" class="slide-list"></ul>
-              <ul class="next-previous">
-                <li><span class="previous">previous</span></li>
-                <li><span class="next">next</span></li>
-              </ul>
             </div>
           </div>
         </section>
@@ -161,6 +156,19 @@
       <!--footer section ends-->
     </div>
     <!--container end-->
+    <!-- jQuery -->
+    <!-- <script src="assets/vendor/jquery-3.7.1.min.js"></script> -->
+    <!-- Script tag starts here -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
     <script src="assets/js/script.js"></script>
+    <!-- Script tag ends here -->
   </body>
 </html>
